@@ -35,3 +35,11 @@ const toString = function (inBinary) {
 
     parseInt(inBinary, 2).toString(10)
 }
+
+let email = encode(toBinary('isaa'))
+
+const toBytes = function (inArray) {
+
+
+    return bytes
+}
