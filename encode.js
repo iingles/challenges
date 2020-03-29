@@ -6,12 +6,9 @@ const toBinary = function (inString) {
         let num = inString.charCodeAt(i).toString(2)
 
         if (num.length < 8) {
-            let pad = 8 - num.length
-
-            for (let j = 0; j < pad.length; pad++) {
-                num = 0 + bit
+            for (let j = 0; j < (8 - num.length); j++) {
+                num = '0' + num
             }
-            
         }
 
         binary = num + binary
@@ -21,7 +18,20 @@ const toBinary = function (inString) {
 }
 
 const encode = function (binary) {
-    let bitString = binary.toString(...binary)
+    let [x, w, v, u, t, s, r, q, p, n, m, l, k, j, h, g, f, e, d, c, b, a, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0] = binary
 
-    return bitString
+    return [x, p, f, a7, w, n, e, a6, v, m, d, a5, u, l, c, a4, t, k, b, a3, s, j, a, a2, r, h, a9, a1, q, g, a8, a0]
+}
+
+const decode = function (inString) {
+    let [x, p, f, a7, w, n, e, a6, v, m, d, a5, u, l, c, a4, t, k, b, a3, s, j, a, a2, r, h, a9, a1, q, g, a8, a0] = inString
+
+    return [x, w, v, u, t, s, r, q, p, n, m, l, k, j, h, g, f, e, d, c, b, a, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0]
+}
+
+const toString = function (inBinary) {
+    let bytes = []
+
+
+    parseInt(inBinary, 2).toString(10)
 }
